@@ -7,7 +7,7 @@ setup(
     packages=['isdigit'],
     version='0.0.5',
     license='MIT',
-    description='Simple, mainly useless python package that checks if a string, int, or float is a digit.',
+    description='Simple, mainly useless, python package that checks if a string, int, or float is a digit.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     classifiers=[
