@@ -14,10 +14,16 @@ class IsDigit:
 
     def is_digit(self, item: str) -> bool:
         """Check if int or float is a digit"""
+        item_type = None
         try:
-            item_type = type(ast.literal_eval(item))
+            int(item)
+            item_type = int
         except ValueError:
-            return False
+            try:
+                float(item)
+                item_type = float
+            except ValueError:
+                return False
         if isinstance(item_type, int):
             return self.allow_ints
         elif isinstance(item_type, float):
