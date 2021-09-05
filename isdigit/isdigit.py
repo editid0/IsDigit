@@ -17,20 +17,20 @@ class IsDigit:
         item_type = None
         try:
             int(item)
+            # type of 1 is int, so isinstance will work correctly
             item_type = 1
         except ValueError:
             try:
                 float(item)
+                # type of 0.1 is float, so isinstance will work correctly
                 item_type = 0.1
             except ValueError:
-                print('value')
                 return False
         if isinstance(item_type, int):
             return self.allow_ints
         elif isinstance(item_type, float):
             return self.allow_floats
         else:
-            print('final', type(item_type))
             return False
 
     def __call__(self, item: str) -> bool:
