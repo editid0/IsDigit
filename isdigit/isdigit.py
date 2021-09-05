@@ -17,11 +17,11 @@ class IsDigit:
         item_type = None
         try:
             int(item)
-            item_type = int
+            item_type = 1
         except ValueError:
             try:
                 float(item)
-                item_type = float
+                item_type = 0.1
             except ValueError:
                 print('value')
                 return False
