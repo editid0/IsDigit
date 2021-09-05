@@ -7,8 +7,6 @@
 - `pip install -U IsDigit`
 
 <br />
-<br />
-<br />
 
 # Examples
 ```python
