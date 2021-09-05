@@ -30,7 +30,7 @@ class IsDigit:
         elif isinstance(item_type, float):
             return self.allow_floats
         else:
-            print('final')
+            print('final', type(item))
             return False
 
     def __call__(self, item: str) -> bool:
