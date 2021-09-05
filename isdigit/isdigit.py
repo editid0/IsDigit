@@ -23,12 +23,14 @@ class IsDigit:
                 float(item)
                 item_type = float
             except ValueError:
+                print('value')
                 return False
         if isinstance(item_type, int):
             return self.allow_ints
         elif isinstance(item_type, float):
             return self.allow_floats
         else:
+            print('final')
             return False
 
     def __call__(self, item: str) -> bool:
