@@ -1,7 +1,7 @@
 import ast
 
 class IsDigit:
-    def __init__(self, *, allow_floats: bool = False, allow_ints: bool = True, allow) -> None:
+    def __init__(self, *, allow_floats: bool = False, allow_ints: bool = True) -> None:
         """Class constructor
 
         :param allow_floats: Whether or not a float should return True, defaults to False
