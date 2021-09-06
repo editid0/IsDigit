@@ -1,11 +1,19 @@
 from setuptools import setup
 
+extras_require = {
+    'discord': [
+        'discord.py'
+    ]
+}
+
 setup(
     name='IsDigit',
     url='https://github.com/editid0/IsDigit',
     author='editid',
     packages=['isdigit'],
-    version='0.0.5',
+    version='0.0.5-debug',
+    extras_require=extras_require,
+    python_requires='>=3.8.0',
     license='MIT',
     description='Simple, mainly useless, python package that checks if a string, int, or float is a digit.',
     long_description=open('README.md').read(),
