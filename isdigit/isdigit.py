@@ -30,7 +30,7 @@ class IsDigit:
         item_type = None
         try:
             if return_digit:
-                digit_to_return = float(item)
+                digit_to_return = int(item)
             else:
                 int(item)
             # type of 1 is int, so isinstance will work correctly
