@@ -61,7 +61,11 @@ digits = IsDigit()
 
 @bot.command()
 async def test(ctx, arg: digits):
-    await ctx.send(arg)
+    await ctx.send(type(arg))
+
+@test.error
+async def test_error(ctx, error):
+    await ctx.send(error)
 
 bot.run('token')
 ```
