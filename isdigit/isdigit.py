@@ -65,7 +65,7 @@ class IsDigit:
     async def convert(self, ctx, argument) -> typing.Optional[int]:
         if not commands:
             raise Exception(f"discord.ext is not installed, please install it to use this converter")
-        if (item := _isdigit.isdigit(argument, return_digit=True)):
+        if (item := self.is_digit(argument, return_digit=True)):
             return item
         else:
             raise commands.BadArgument(f'{argument} is not a valid number.')
