@@ -10,9 +10,9 @@
 
 # Examples
 ```python
-import isdigit as id
+from isdigit import IsDigit
 
-digits = id.IsDigit(allow_floats=True, allow_ints=True)
+digits = IsDigit(allow_floats=True, allow_ints=True)
 
 print(digits.is_digit('1')) # returns True
 print(digits.is_digit('1.0')) # returns True
@@ -21,9 +21,9 @@ print(digits.is_digit('x')) # returns False
 ```
 Or, alternatively:
 ```python
-import isdigit as id
+from isdigit import IsDigit
 
-digits = id.IsDigit()
+digits = IsDigit()
 
 print(digits.is_digit('1')) # returns True
 print(digits.is_digit('1.0')) # returns False
