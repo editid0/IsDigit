@@ -11,7 +11,7 @@ setup(
     url='https://github.com/editid0/IsDigit',
     author='editid',
     packages=['isdigit'],
-    version='0.0.8',
+    version='0.0.9',
     extras_require=extras_require,
     python_requires='>=3.8.0',
     license='MIT',
