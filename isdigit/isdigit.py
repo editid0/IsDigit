@@ -17,7 +17,7 @@ class IsDigit:
         self.allow_floats = allow_floats
         self.allow_ints = allow_ints
 
-    def is_digit(self, item: str, return_digit: bool = False) -> typing.Union[bool, int, float]:
+    def is_digit(self, item: str, return_digit: bool = True) -> typing.Union[bool, int, float]:
         """Checks if a string is a digit
 
         :param item: The string to check
