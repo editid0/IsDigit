@@ -46,13 +46,9 @@ class IsDigit:
             except ValueError:
                 return False
         if isinstance(item_type, int):
-            if return_digit:
-                return digit_to_return
-            return self.allow_ints
+            return digit_to_return if return_digit else self.allow_ints
         elif isinstance(item_type, float):
-            if return_digit:
-                return digit_to_return
-            return self.allow_floats
+            return digit_to_return if return_digit else self.allow_floats
         else:
             return False
 
@@ -64,7 +60,10 @@ class IsDigit:
 
     async def convert(self, ctx, argument) -> typing.Optional[int]:
         if not commands:
-            raise Exception(f"discord.ext is not installed, please install it to use this converter")
+            raise Exception(
+                'discord.ext is not installed, please install it to use this converter'
+            )
+
         if (item := self.is_digit(argument, return_digit=True)):
             return item
         else:
